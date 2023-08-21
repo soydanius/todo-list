@@ -23,13 +23,11 @@ header {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Nicer font */
 }
 
-/* Style the title */
 #list-type {
-  font-size: 2.5rem; /* Slightly larger font size */
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
-/* Style the form container */
 #type_form {
   max-width: 400px;
   margin: 0 auto;
@@ -41,7 +39,6 @@ header {
   color: #333;
 }
 
-/* Style the form elements */
 #type_form span {
   display: block;
   margin-bottom: 10px;
@@ -68,7 +65,7 @@ header {
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s; /* Add a smooth transition effect */
+  transition: background-color 0.3s;
 }
 
 .name_submit:hover {
