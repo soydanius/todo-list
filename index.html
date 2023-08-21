@@ -3,11 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>ToDo-List</title>
   </head>
   <body>
     <header>
-      <h1>ToDo-List</h1>
+      <h1 id="list-type">
+        <span id="special-word"></span>
+        To-Do List
+      </h1>
+      <form id="type_form">
+        <span>Hi, what type of list you need? </span>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          value=""
+          placeholder="..."
+          required
+          autocomplete="off"
+        />
+        <button class="name_submit" type="submit">Submit</button>
+      </form>
     </header>
     <main>
       <div class="container">
@@ -21,5 +38,7 @@
         </div>
       </div>
     </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
