@@ -20,7 +20,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Nicer font */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #list-type {
