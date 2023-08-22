@@ -11,13 +11,13 @@
     />
   </head>
   <body>
-    <div>
-      <header>
-        <h1 id="list-type">
-          <span id="special-word"></span>
-          To-Do List
-        </h1>
-        <!-- <form id="type_form">
+    <>
+    <header>
+      <h1 id="list-type">
+        <span id="special-word"></span>
+        To-Do List
+      </h1>
+      <!-- <form id="type_form">
         <span>Hi, what type of list you need? </span>
         <input
           type="text"
@@ -30,22 +30,32 @@
         />
         <button class="name_submit" type="submit">Submit</button>
       </form> -->
-      </header>
-      <main>
-        <div class="container">
-          <div id="input-container">
-            <!-- INPUT + SUBMIT BUTTON -->
-            <input type="text" id="todo-input" placeholder="Enter a new todo" />
-            <button id="add-button"><i class="fas fa-plus"></i></button>
-          </div>
-          <div id="list-container">
-            <ul>
-              <!-- TODO LIST ITEMS (li elements) -->
-            </ul>
-          </div>
+    </header>
+    <main>
+      <div class="container">
+        <div id="input-container">
+          <!-- INPUT + SUBMIT BUTTON -->
+          <input type="text" id="todo-input" placeholder="Enter a new todo" />
+          <button id="add-button"><i class="fas fa-plus"></i></button>
         </div>
-      </main>
-    </div>
+        <div class="list-container">
+          <ul class="task-list">
+            <li class="task-item">
+              <input type="checkbox" />
+              <span class="task-text">Buy groceries</span>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" />
+              <span class="task-text">Finish homework</span>
+            </li>
+            <li class="task-item">
+              <input type="checkbox" />
+              <span class="task-text">Call John</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
 
     <script src="index.js"></script>
   </body>
