@@ -3,13 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*
-:root {
-  --color-1: black;
-  --color-2: white;
-  --color-3: #cecece;
-  --color-4: #5e5e5e;
-}*/
+
 body {
   background: linear-gradient(to bottom, #dfd3ab, #cb8f7f);
   height: 100vh;
@@ -30,7 +24,7 @@ header {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#list-type {
+/*#list-type {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
@@ -78,7 +72,7 @@ header {
 .name_submit:hover {
   background-color: #cb8f7f;
 }
-
+*/
 main {
   display: flex;
   justify-content: center;
@@ -91,4 +85,55 @@ main {
   background-color: white;
   border-radius: 4px;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-container {
+  width: 85%;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 4px;
+  background: linear-gradient(to bottom, #dfd3ab, #cb8f7f);
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.task-item:hover {
+  background: linear-gradient(to bottom, #cb8f7f, #dfd3ab);
+}
+
+.task-item input[type="checkbox"] {
+  margin-right: 10px;
+  appearance: none;
+  border: 2px solid #fff;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-item input[type="checkbox"]:checked {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.task-text {
+  font-size: 18px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
