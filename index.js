@@ -1,4 +1,4 @@
-/*const listType = document.getElementById("list-type");
+/* const listType = document.getElementById("list-type");
 const listTypeForm = document.getElementById("type_form");
 const todoItems = document.getElementById("todoItems");
 const newTypeInput = document.getElementById("fname");
@@ -13,4 +13,5 @@ listTypeForm.addEventListener("submit", function (event) {
     listTypeForm.style.display = "none";
     todoItems.style.display = "block";
   }
-});*/
+});
+ */
