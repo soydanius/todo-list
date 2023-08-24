@@ -120,7 +120,7 @@ main {
   background: linear-gradient(to bottom, #cb8f7f, #dfd3ab);
 }
 
-.task-item input[type="checkbox"] {
+/*.task-item input[type="checkbox"] {
   margin-right: 10px;
   appearance: none;
   border: 2px solid #fff;
@@ -134,7 +134,7 @@ main {
   background-color: #fff;
   border-color: #fff;
 }
-
+*/
 .task-text {
   font-size: 18px;
   color: white;
