@@ -85,7 +85,7 @@ main {
 
 .container {
   width: 30%;
-  height: 60vh;
+  min-height: 60vh;
   background-color: white;
   border-radius: 8px;
   padding: 2rem;
@@ -96,7 +96,7 @@ main {
 .list-container {
   width: 100%;
   padding: 20px;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .task-list {
@@ -164,8 +164,8 @@ main {
 }
 
 #add-button {
-  height: 2.5rem;
-  width: 2.5rem;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
   background-color: var(--color-1);
   border: none;
   border-radius: 100px;
@@ -178,4 +178,9 @@ main {
 
 #add-button:hover {
   background-color: #aa786a;
+}
+
+.delete-button {
+  min-width: 2rem;
+  min-height: 2rem;
 }
