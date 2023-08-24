@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle task completion
   taskList.addEventListener("click", function (event) {
-    if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
+    if (event.target.tagName === "INPUT") {
       const taskText = event.target.nextElementSibling;
       taskText.classList.toggle("completed");
     }
@@ -48,9 +48,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const taskItem = document.createElement("li");
     taskItem.classList.add("task-item");
     taskItem.innerHTML = `
-      <input type="checkbox" />
       <span class="task-text">${text}</span>
     `;
     taskList.appendChild(taskItem);
   }
+});
+
+const deleteButtons = document.querySelectorAll(".task-item .delete-button");
+deleteButtons.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    /* event.target.parentNode.remove(); */
+    console.log("hallo");
+  });
 });
