@@ -139,6 +139,7 @@ main {
   font-size: 18px;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 #input-container {
@@ -178,4 +179,10 @@ main {
 
 #add-button:hover {
   background-color: #aa786a;
+}
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px; 
+  color: #fff;
 }

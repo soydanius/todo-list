@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Toggle task completion
   taskList.addEventListener("click", function(event) {
+    console.log (event);
     if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
       const taskText = event.target.nextElementSibling;
       taskText.classList.toggle("completed");
