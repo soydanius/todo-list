@@ -184,3 +184,9 @@ main {
   min-width: 2rem;
   min-height: 2rem;
 }
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  color: #fff;
+}
