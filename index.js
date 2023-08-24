@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const todoInput = document.getElementById("todo-input");
   const taskList = document.querySelector(".task-list");
 
-  // Add new task
   addButton.addEventListener("click", function () {
     const taskText = todoInput.value.trim();
     if (taskText !== "") {
@@ -29,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Add task when pressing Enter in the input field
   todoInput.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
       addButton.click();
@@ -38,8 +36,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toggle task completion
   taskList.addEventListener("click", function (event) {
-    if (event.target.tagName === "INPUT") {
+    console.log(event);
+    if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
       const taskText = event.target.nextElementSibling;
+      taskText.classList.toggle("completed");
+    }
+  });
+
+  taskList.addEventListener("click", function (event) {
+    if (event.target.classList.contains("checkbox-icon")) {
+      const taskItem = event.target.closest(".task-item");
+      const taskText = taskItem.querySelector(".task-text");
+      taskItem.classList.toggle("completed");
       taskText.classList.toggle("completed");
     }
   });
@@ -47,9 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function addTask(text) {
     const taskItem = document.createElement("li");
     taskItem.classList.add("task-item");
-    taskItem.innerHTML = `
+    taskItem.innerHTML = `<div class="checkbox-container">
+    <i class="fa-regular fa-circle-check checkbox-icon" style="color: #cb8f7f;"></i>
+  </div>
       <span class="task-text">${text}</span>
-    `;
+      `;
     taskList.appendChild(taskItem);
   }
 });

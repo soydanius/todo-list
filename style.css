@@ -163,6 +163,15 @@ main {
   outline-color: var(--color-1);
 }
 
+.checkbox-icon {
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.task-item.completed {
+  background: linear-gradient(to bottom, #cb8f7f, #dfd3ab);
+}
+
 #add-button {
   height: 2.5rem;
   width: 2.5rem;
@@ -178,4 +187,10 @@ main {
 
 #add-button:hover {
   background-color: #aa786a;
+}
+
+.completed {
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;
+  color: #fff;
 }
