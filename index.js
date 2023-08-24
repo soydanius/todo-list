@@ -42,21 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const taskItem = event.target.parentNode;
       taskItem.classList.toggle("completed");
 
-      const deleteButton = taskItem.querySelector(".delete-button");
-
-      deleteButton.classList.remove("completed");
       saveTasks();
     }
   });
 
-  taskList.addEventListener("click", function (event) {
+  /* taskList.addEventListener("click", function (event) {
     if (event.target.classList.contains("checkbox-icon")) {
       const taskItem = event.target.closest(".task-item");
       const taskText = taskItem.querySelector(".task-text");
       taskItem.classList.toggle("completed");
       taskText.classList.toggle("completed");
     }
-  });
+  });*/
 
   function addTask(text) {
     /* const taskItem = document.createElement("li");

@@ -9,7 +9,7 @@
   --color-2: #dfd3ab;
 }
 body {
-  /*height: 100vh;*/
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,7 +202,7 @@ main {
   align-content: stretch;
 }
 
-.completed {
+.completed .task-text {
   text-decoration: line-through;
   text-decoration-thickness: 3px;
   color: #fff;
