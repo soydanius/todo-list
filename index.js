@@ -1,4 +1,4 @@
-/* const listType = document.getElementById("list-type");
+const listType = document.getElementById("list-type");
 const listTypeForm = document.getElementById("type_form");
 const todoItems = document.getElementById("todoItems");
 const newTypeInput = document.getElementById("fname");
@@ -14,7 +14,6 @@ listTypeForm.addEventListener("submit", function (event) {
     todoItems.style.display = "block";
   }
 });
- */
 
 document.addEventListener("DOMContentLoaded", function () {
   const todoInput = document.getElementById("todo-input");
@@ -67,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Edit task
-
   taskList.addEventListener("click", (event) => {
     const target = event.target.closest(".task-item > .task-text");
     const taskText = target.innerHTML;
@@ -95,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function taskEditInput(initialText) {
-    return `<input type="text" value=${initialText} />`;
+    return `<input type="text" value=${initialText} />`; // edit input is created
   }
 
   // Delete task
