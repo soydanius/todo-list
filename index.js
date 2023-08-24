@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
       const taskItem = event.target.parentNode;
       taskItem.classList.toggle("completed");
+
+      const deleteButton = taskItem.querySelector(".delete-button");
+
+      deleteButton.classList.remove("completed");
       saveTasks();
     }
   });
@@ -67,9 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
     taskList.innerHTML += `<li class="task-item">
     <input type="checkbox" />
     <span class="task-text">${text}</span>
-    <button class="delete-button">
-      <i class="fas fa-trash"></i>
-    </button>
+    <div class= "delete-button">
+    <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+    </div>
     </li>`;
 
     saveTasks();
