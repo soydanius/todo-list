@@ -41,15 +41,26 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.target.tagName === "INPUT" && event.target.type === "checkbox") {
       const taskItem = event.target.parentNode;
       taskItem.classList.toggle("completed");
+
       saveTasks();
     }
   });
 
+  /* taskList.addEventListener("click", function (event) {
+    if (event.target.classList.contains("checkbox-icon")) {
+      const taskItem = event.target.closest(".task-item");
+      const taskText = taskItem.querySelector(".task-text");
+      taskItem.classList.toggle("completed");
+      taskText.classList.toggle("completed");
+    }
+  });*/
+
   function addTask(text) {
     /* const taskItem = document.createElement("li");
     taskItem.classList.add("task-item");
-    taskItem.innerHTML = `
-      <input type="checkbox" />
+    taskItem.innerHTML = `<div class="checkbox-container">
+    <i class="fa-regular fa-circle-check checkbox-icon" style="color: #cb8f7f;"></i>
+  </div>
       <span class="task-text">${text}</span>
     `;
     taskList.appendChild(taskItem); */
@@ -57,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
     taskList.innerHTML += `<li class="task-item">
     <input type="checkbox" />
     <span class="task-text">${text}</span>
-    <button class="delete-button">
-      <i class="fas fa-trash"></i>
-    </button>
+    <div class= "delete-button">
+    <i class="fa-solid fa-xmark" style="color: #ffffff;"></i>
+    </div>
     </li>`;
 
     saveTasks();
